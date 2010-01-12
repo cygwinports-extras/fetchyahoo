@@ -1,0 +1,12 @@
+DESCRIPTION="Perl script for fetching Yahoo webmail"
+HOMEPAGE="http://fetchyahoo.twizzler.org/"
+SRC_URI="http://fetchyahoo.twizzler.org/${P}.tar.gz"
+
+src_compile() { :; }
+
+src_install() {
+	cd ${S}
+	dobin fetchyahoo
+	dodoc fetchyahoorc Credits
+	doman fetchyahoo.1
+}
